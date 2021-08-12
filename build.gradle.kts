@@ -1,3 +1,4 @@
+
 plugins {
     id("org.jetbrains.kotlin.jvm") version "1.4.32"
     id("org.jetbrains.kotlin.kapt") version "1.4.32"
@@ -39,6 +40,14 @@ dependencies {
     implementation("io.micronaut:micronaut-validation")
 
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
+
+    //JPA
+    runtime("io.micronaut.sql:micronaut-jdbc-hikari")
+    implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
+    implementation("mysql:mysql-connector-java:8.0.26")
+    implementation("io.micronaut.xml:micronaut-jackson-xml")
+    testImplementation("org.mockito:mockito-core:3.8.0")
+    testImplementation("com.h2database:h2:1.3.148")
 
 }
 
